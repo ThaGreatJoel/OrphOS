@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#1e1e20] text-[#ececec]">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickDev — Deploy in Seconds</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::selection { background-color: #10b981; color: white; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 py-4 sticky top-0 z-50 bg-[#1e1e20]/80 backdrop-blur border-b border-gray-700">
+    <h1 class="text-xl font-bold tracking-wide text-emerald-400">🚀 QuickDev</h1>
+    <nav class="space-x-5 hidden md:flex text-sm text-gray-300">
+      <a href="#features" class="hover:text-white">Features</a>
+      <a href="#commands" class="hover:text-white">CLI</a>
+      <a href="#stats" class="hover:text-white">Stats</a>
+      <a href="https://github.com/yourusername/quickdev" class="hover:text-white">GitHub</a>
+      <a href="/upload" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-1.5 rounded font-medium shadow">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center px-6 py-24 bg-gradient-to-b from-[#1e1e20] to-[#2a2a2d]">
+    <!-- Mr. Orpheus -->
+    <div class="flex flex-col items-center justify-center mb-6">
+      <img src="/public/orpheus.png" alt="Mr. Orpheus" class="w-24 h-24 drop-shadow-lg animate-bounce rounded-full border border-gray-600 bg-black p-2" />
+      <p class="mt-2 text-sm text-emerald-400 font-medium">✨ Meet Mr. Orpheus, your deploy dragon</p>
+    </div>
+
+    <!-- Hero Text -->
+    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 text-white">Deploy Static Sites in Seconds</h1>
+    <p class="max-w-2xl mx-auto text-gray-400 mb-10 text-lg">
+      QuickDev hosts your zipped static websites instantly — no backend needed.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/upload" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded shadow">Get Started</a>
+      <a href="#commands" class="border border-gray-600 hover:border-white text-white font-semibold px-6 py-3 rounded">Learn CLI</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-5xl mx-auto px-6 py-20">
+    <h3 class="text-2xl font-bold text-center mb-12 text-white">Why Developers Love QuickDev</h3>
+    <div class="grid sm:grid-cols-3 gap-6 text-center">
+      <div class="bg-[#2a2a2d] p-6 rounded-xl shadow border border-gray-700">
+        <div class="text-3xl text-emerald-400 mb-2">⚡</div>
+        <p class="font-semibold text-white mb-1">Blazing Fast</p>
+        <p class="text-sm text-gray-400">Your website is live in just a few seconds.</p>
+      </div>
+      <div class="bg-[#2a2a2d] p-6 rounded-xl shadow border border-gray-700">
+        <div class="text-3xl text-emerald-400 mb-2">🧠</div>
+        <p class="font-semibold text-white mb-1">Simple & Smart</p>
+        <p class="text-sm text-gray-400">No config, no setup. Just zip and go.</p>
+      </div>
+      <div class="bg-[#2a2a2d] p-6 rounded-xl shadow border border-gray-700">
+        <div class="text-3xl text-emerald-400 mb-2">💸</div>
+        <p class="font-semibold text-white mb-1">Free Forever</p>
+        <p class="text-sm text-gray-400">No pricing tiers. Unlimited public hosting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Command Block -->
+  <section id="commands" class="bg-[#1e1e20] text-emerald-400 text-sm rounded-lg mx-4 sm:mx-auto max-w-3xl p-6 shadow-lg border border-gray-700 mb-20 font-mono">
+    <pre class="whitespace-pre-wrap">
+# Coming soon: QuickDev CLI
+$ npm install -g quickdev-cli
+$ quickdev login
+$ quickdev deploy ./project.zip
+    </pre>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="text-center px-6 pb-20">
+    <div class="grid grid-cols-3 gap-6 max-w-md mx-auto text-emerald-400 font-bold text-lg">
+      <div>
+        <div class="text-3xl">1K+</div>
+        <div class="text-sm text-gray-300">Deployments</div>
+      </div>
+      <div>
+        <div class="text-3xl">500+</div>
+        <div class="text-sm text-gray-300">Developers</div>
+      </div>
+      <div>
+        <div class="text-3xl">10+</div>
+        <div class="text-sm text-gray-300">Frameworks</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-10 border-t border-gray-700">
+    Built by Joel • <a href="https://github.com/yourusername/quickdev" class="text-emerald-400 hover:underline">Source Code</a>
+  </footer>
+
+</body>
+</html>
