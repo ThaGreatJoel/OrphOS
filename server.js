@@ -42,3 +42,9 @@ app.post("/upload", upload.single("sitezip"), async (req, res) => {
 app.listen(PORT, () => {
   console.log(`QuickDev is Online at http://localhost:${PORT}`);
 });
+
+process.on('SIGINT', () => {
+  console.log('🛑 Server shutting down...');
+  // Optional: write to a file or trigger something else
+  process.exit();
+});

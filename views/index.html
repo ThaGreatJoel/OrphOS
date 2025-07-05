@@ -4,7 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuickDev — Deploy in Seconds</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+
+<script>
+  const techs = ["Node.js", "Express", "React", "Next.js", "Svelte", "Astro", "HTML/CSS", "Vite"];
+  const techSpan = document.getElementById("tech-name");
+  let index = 0;
+
+  setInterval(() => {
+    techSpan.classList.add("opacity-0");
+
+    setTimeout(() => {
+      index = (index + 1) % techs.length;
+      techSpan.textContent = techs[index];
+
+      techSpan.classList.remove("opacity-0");
+    }, 500); 
+  }, 2000); 
+
+</script>
   <style>
     ::selection { background-color: #10b981; color: white; }
     html { scroll-behavior: smooth; }
@@ -12,7 +30,7 @@
 </head>
 <body class="font-sans">
 
-  <!-- Navbar -->
+
   <header class="flex justify-between items-center px-6 py-4 sticky top-0 z-50 bg-[#1e1e20]/80 backdrop-blur border-b border-gray-700">
     <h1 class="text-xl font-bold tracking-wide text-emerald-400">🚀 QuickDev</h1>
     <nav class="space-x-5 hidden md:flex text-sm text-gray-300">
@@ -26,10 +44,16 @@
 
   <!-- Hero -->
   <section class="text-center px-6 py-24 bg-gradient-to-b from-[#1e1e20] to-[#2a2a2d]">
+    <h2 class="text-lg sm:text-xl text-gray-300 font-medium mt-6">
+  Deploy your site built with
+  <span id="tech-name" class="text-emerald-400 transition-opacity duration-500 opacity-100">Node.js</span>
+</h2>
+
+
     <!-- Mr. Orpheus -->
     <div class="flex flex-col items-center justify-center mb-6">
-      <img src="/public/orpheus.png" alt="Mr. Orpheus" class="w-24 h-24 drop-shadow-lg animate-bounce rounded-full border border-gray-600 bg-black p-2" />
-      <p class="mt-2 text-sm text-emerald-400 font-medium">✨ Meet Mr. Orpheus, your deploy dragon</p>
+      <img src="https://raw.githubusercontent.com/ThaGreatJoel/OrphOS/refs/heads/main/public/ophenus.png" alt="Orphennus" class="w-48 h-24 drop-shadow-lg animate-bounce" />
+      <p class="mt-2 text-sm text-emerald-400 font-medium">✨ Your deploy dinos</p>
     </div>
 
     <!-- Hero Text -->
