@@ -6,24 +6,6 @@
   <title>OrphOS — Deploy in Seconds</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-  <script defer>const techs = ["Node.js", "Express", "React", "Vue", "Next.js", "Svelte", "Astro", "HTML/CSS", "Vite"];
-  const techSpan = document.getElementById("tech-name");
-  let index = 0;
-
-  setInterval(() => {
-    // Fade out
-    techSpan.classList.add("opacity-0");
-
-    setTimeout(() => {
-      // Switch to next tech name
-      index = (index + 1) % techs.length;
-      techSpan.textContent = techs[index];
-
-      // Fade back in
-      techSpan.classList.remove("opacity-0");
-    }, 500); // Wait for fade-out before switching text
-  }, 2000); // Total loop: every 2 seconds
-</script>
 
   <style>
     ::selection { background-color: #10b981; color: white; }
@@ -39,17 +21,13 @@
       <a href="#features" class="hover:text-white">Features</a>
       <a href="#commands" class="hover:text-white">CLI</a>
       <a href="#stats" class="hover:text-white">Stats</a>
-      <a href="https://github.com/yourusername/quickdev" class="hover:text-white">GitHub</a>
-      <a href="/upload" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-1.5 rounded font-medium shadow">Get Started</a>
+      <a href="https://github.com/ThaGreatJoel/OrphOS" class="hover:text-white">GitHub</a>
+      <a href="/deploy" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-1.5 rounded font-medium shadow">Get Started</a>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="text-center px-6 py-24 bg-gradient-to-b from-[#1e1e20] to-[#2a2a2d]">
-    <h2 class="text-lg sm:text-xl text-gray-300 font-medium mt-6">
-  Deploy your site built with
-  <span id="tech-name" class="text-emerald-400 duration-500">Node.js</span>
-</h2>
 
     <!-- Mr. Orpheus -->
     <div class="flex flex-col items-center justify-center mb-6">
@@ -58,12 +36,28 @@
     </div>
 
     <!-- Hero Text -->
-    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 text-white">Deploy Static Sites in Seconds</h1>
+    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 text-white">
+  Deploy Your Site Built With
+  <span id="tech-name" class="text-emerald-400 transition-opacity duration-500 opacity-100">Node.js</span>
+</h1>
+<script>
+ const techs = ["Node.js", "Express", "React", "Vue", "Next.js", "Svelte", "Astro", "HTML/CSS", "Vite"];
+ const techSpan = document.getElementById("tech-name");
+ let index = 0;
+setInterval(() => { techSpan.classList.add("opacity-0");
+setTimeout(() => { index = (index + 1) % techs.length; techSpan.textContent = techs[index];
+techSpan.classList.remove("opacity-0"); },200); }, 2000); 
+</script>
+
+
+
+
+
     <p class="max-w-2xl mx-auto text-gray-400 mb-10 text-lg">
       QuickDev hosts your zipped static websites instantly —
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="/upload" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded shadow">Get Started</a>
+      <a href="/deploy" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded shadow">Get Started</a>
       <a href="#commands" class="border border-gray-600 hover:border-white text-white font-semibold px-6 py-3 rounded">Learn CLI</a>
     </div>
   </section>
