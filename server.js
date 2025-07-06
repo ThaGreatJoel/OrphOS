@@ -11,6 +11,21 @@ const PORT = process.env.PORT || 3000;
 app.use("/sites", express.static(path.join(__dirname, "public/sites")));
 app.use(express.static("views")); // to serve index.html
 
+
+
+
+// sites
+app.get('/deploy', (req, res) => {
+  res.sendFile(__dirname + '/views/deploy.html');
+});
+
+
+
+
+
+
+
+
 // File upload setup
 const storage = multer.diskStorage({
   destination: "uploads/",
