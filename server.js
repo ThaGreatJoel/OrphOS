@@ -19,7 +19,9 @@ app.get('/deploy', (req, res) => {
   res.sendFile(__dirname + '/views/deploy.html');
 });
 
-
+app.get('/features', (req, res) => {
+  res.sendFile(__dirname + '/views/features.html');
+});
 
 
 
